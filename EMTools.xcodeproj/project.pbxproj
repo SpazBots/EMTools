@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D2D79821EBFEB9E00A41EC7 /* PediatricTidalVolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D79811EBFEB9E00A41EC7 /* PediatricTidalVolumeViewController.swift */; };
+		5D2D79841EBFF21800A41EC7 /* DosageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2D79831EBFF21800A41EC7 /* DosageViewController.swift */; };
+		5D69132B1EBD16FA0050909E /* UIPickerViewActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6913291EBD16FA0050909E /* UIPickerViewActionSheetViewController.swift */; };
+		5D69132E1EBD18280050909E /* IVInfusionRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69132D1EBD18280050909E /* IVInfusionRateViewController.swift */; };
+		EE0CFC4D1EA5A6B700216FA9 /* IBWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFC4C1EA5A6B700216FA9 /* IBWViewController.swift */; };
+		EE0CFC4F1EA5A70600216FA9 /* MAPCPPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFC4E1EA5A70600216FA9 /* MAPCPPViewController.swift */; };
+		EE0CFC511EA5A72C00216FA9 /* CPOTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0CFC501EA5A72C00216FA9 /* CPOTViewController.swift */; };
+		EE122F621FB6104300E6D113 /* PediatricsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE122F611FB6104300E6D113 /* PediatricsTableViewController.swift */; };
+		EE122F641FB610DC00E6D113 /* PediatricNormalVitalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE122F631FB610DC00E6D113 /* PediatricNormalVitalsTableViewController.swift */; };
+		EE122F661FB6112F00E6D113 /* CalculatorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE122F651FB6112F00E6D113 /* CalculatorsTableViewController.swift */; };
+		EE122F681FB6119400E6D113 /* PediatricsCalculatorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE122F671FB6119400E6D113 /* PediatricsCalculatorsTableViewController.swift */; };
+		EE1352621F49F097008F56DC /* Pods_EMTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AF1A59EA3848A7D4F7856AC /* Pods_EMTools.framework */; };
+		EE1352641F49FA1A008F56DC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1352631F49FA1A008F56DC /* Launch Screen.storyboard */; };
+		EE5C3E5E1EC2408B00BE21B9 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C3E5D1EC2408B00BE21B9 /* HomeTableViewController.swift */; };
+		EE6062221EA919770067798A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6062211EA919770067798A /* Extensions.swift */; };
+		EE9850E71EA41C7A0082393D /* GCSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9850E61EA41C7A0082393D /* GCSViewController.swift */; };
+		EE9850E91EA41C900082393D /* UnitConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9850E81EA41C900082393D /* UnitConversionViewController.swift */; };
+		EEB81F3E1E2FB9DD00563FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB81F3D1E2FB9DD00563FE1 /* AppDelegate.swift */; };
+		EEB81F431E2FB9DD00563FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEB81F411E2FB9DD00563FE1 /* Main.storyboard */; };
+		EEE05BD61F4A0F900053D0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEE05BD51F4A043A0053D0B0 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02C5B166D2966E9CB9CCE7D7 /* Pods-EMTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMTools/Pods-EMTools.release.xcconfig"; sourceTree = "<group>"; };
+		5D2D79811EBFEB9E00A41EC7 /* PediatricTidalVolumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PediatricTidalVolumeViewController.swift; sourceTree = "<group>"; };
+		5D2D79831EBFF21800A41EC7 /* DosageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DosageViewController.swift; sourceTree = "<group>"; };
+		5D6913291EBD16FA0050909E /* UIPickerViewActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerViewActionSheetViewController.swift; sourceTree = "<group>"; };
+		5D69132D1EBD18280050909E /* IVInfusionRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IVInfusionRateViewController.swift; sourceTree = "<group>"; };
+		9AF1A59EA3848A7D4F7856AC /* Pods_EMTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EMTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E176ABAD01B3C0B82BEEE993 /* Pods-EMTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMTools/Pods-EMTools.debug.xcconfig"; sourceTree = "<group>"; };
+		EE0CFC4C1EA5A6B700216FA9 /* IBWViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBWViewController.swift; sourceTree = "<group>"; };
+		EE0CFC4E1EA5A70600216FA9 /* MAPCPPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAPCPPViewController.swift; sourceTree = "<group>"; };
+		EE0CFC501EA5A72C00216FA9 /* CPOTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPOTViewController.swift; sourceTree = "<group>"; };
+		EE122F611FB6104300E6D113 /* PediatricsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PediatricsTableViewController.swift; sourceTree = "<group>"; };
+		EE122F631FB610DC00E6D113 /* PediatricNormalVitalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PediatricNormalVitalsTableViewController.swift; sourceTree = "<group>"; };
+		EE122F651FB6112F00E6D113 /* CalculatorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorsTableViewController.swift; sourceTree = "<group>"; };
+		EE122F671FB6119400E6D113 /* PediatricsCalculatorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PediatricsCalculatorsTableViewController.swift; sourceTree = "<group>"; };
+		EE1352631F49FA1A008F56DC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		EE5C3E5D1EC2408B00BE21B9 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		EE6062211EA919770067798A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EE9850E61EA41C7A0082393D /* GCSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCSViewController.swift; sourceTree = "<group>"; };
+		EE9850E81EA41C900082393D /* UnitConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConversionViewController.swift; sourceTree = "<group>"; };
+		EEB81F3A1E2FB9DD00563FE1 /* EMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB81F3D1E2FB9DD00563FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEB81F421E2FB9DD00563FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEB81F491E2FB9DD00563FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE05BD51F4A043A0053D0B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEB81F371E2FB9DD00563FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1352621F49F097008F56DC /* Pods_EMTools.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		35559038B110F399E4F39F58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E176ABAD01B3C0B82BEEE993 /* Pods-EMTools.debug.xcconfig */,
+				02C5B166D2966E9CB9CCE7D7 /* Pods-EMTools.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EE9850E11EA41BFA0082393D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EE122F611FB6104300E6D113 /* PediatricsTableViewController.swift */,
+				EE122F631FB610DC00E6D113 /* PediatricNormalVitalsTableViewController.swift */,
+				EE122F651FB6112F00E6D113 /* CalculatorsTableViewController.swift */,
+				EE122F671FB6119400E6D113 /* PediatricsCalculatorsTableViewController.swift */,
+				5D2D79811EBFEB9E00A41EC7 /* PediatricTidalVolumeViewController.swift */,
+				5D69132D1EBD18280050909E /* IVInfusionRateViewController.swift */,
+				EE5C3E5D1EC2408B00BE21B9 /* HomeTableViewController.swift */,
+				5D2D79831EBFF21800A41EC7 /* DosageViewController.swift */,
+				EE9850E61EA41C7A0082393D /* GCSViewController.swift */,
+				EE9850E81EA41C900082393D /* UnitConversionViewController.swift */,
+				EE0CFC4C1EA5A6B700216FA9 /* IBWViewController.swift */,
+				EE0CFC4E1EA5A70600216FA9 /* MAPCPPViewController.swift */,
+				EE6062211EA919770067798A /* Extensions.swift */,
+				EE0CFC501EA5A72C00216FA9 /* CPOTViewController.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		EEB81F311E2FB9DD00563FE1 = {
+			isa = PBXGroup;
+			children = (
+				EEB81F3C1E2FB9DD00563FE1 /* EMTools */,
+				EEB81F3B1E2FB9DD00563FE1 /* Products */,
+				35559038B110F399E4F39F58 /* Pods */,
+				F6F9610F28B40F7D2020B50D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EEB81F3B1E2FB9DD00563FE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEB81F3A1E2FB9DD00563FE1 /* EMTools.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEB81F3C1E2FB9DD00563FE1 /* EMTools */ = {
+			isa = PBXGroup;
+			children = (
+				5D6913291EBD16FA0050909E /* UIPickerViewActionSheetViewController.swift */,
+				EE9850E11EA41BFA0082393D /* Sources */,
+				EEB81F3D1E2FB9DD00563FE1 /* AppDelegate.swift */,
+				EEB81F411E2FB9DD00563FE1 /* Main.storyboard */,
+				EE1352631F49FA1A008F56DC /* Launch Screen.storyboard */,
+				EEE05BD51F4A043A0053D0B0 /* Assets.xcassets */,
+				EEB81F491E2FB9DD00563FE1 /* Info.plist */,
+			);
+			path = EMTools;
+			sourceTree = "<group>";
+		};
+		F6F9610F28B40F7D2020B50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AF1A59EA3848A7D4F7856AC /* Pods_EMTools.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEB81F391E2FB9DD00563FE1 /* EMTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEB81F4C1E2FB9DD00563FE1 /* Build configuration list for PBXNativeTarget "EMTools" */;
+			buildPhases = (
+				90C3E9B33AFBA69DC142B945 /* [CP] Check Pods Manifest.lock */,
+				EEB81F361E2FB9DD00563FE1 /* Sources */,
+				EEB81F371E2FB9DD00563FE1 /* Frameworks */,
+				EEB81F381E2FB9DD00563FE1 /* Resources */,
+				89EA59CE5E63879A10ADD1FA /* [CP] Embed Pods Frameworks */,
+				19DF6A5F594F4DAF328C951C /* [CP] Copy Pods Resources */,
+				5DF0A1D71EC0119300CFBE35 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMTools;
+			productName = RapidRef;
+			productReference = EEB81F3A1E2FB9DD00563FE1 /* EMTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEB81F321E2FB9DD00563FE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Joel Payne";
+				TargetAttributes = {
+					EEB81F391E2FB9DD00563FE1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5ES99U9Z85;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EEB81F351E2FB9DD00563FE1 /* Build configuration list for PBXProject "EMTools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEB81F311E2FB9DD00563FE1;
+			productRefGroup = EEB81F3B1E2FB9DD00563FE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEB81F391E2FB9DD00563FE1 /* EMTools */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEB81F381E2FB9DD00563FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEB81F431E2FB9DD00563FE1 /* Main.storyboard in Resources */,
+				EE1352641F49FA1A008F56DC /* Launch Screen.storyboard in Resources */,
+				EEE05BD61F4A0F900053D0B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19DF6A5F594F4DAF328C951C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMTools/Pods-EMTools-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DF0A1D71EC0119300CFBE35 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
+		89EA59CE5E63879A10ADD1FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EMTools/Pods-EMTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C3E9B33AFBA69DC142B945 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EMTools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEB81F361E2FB9DD00563FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5C3E5E1EC2408B00BE21B9 /* HomeTableViewController.swift in Sources */,
+				EE9850E71EA41C7A0082393D /* GCSViewController.swift in Sources */,
+				EE9850E91EA41C900082393D /* UnitConversionViewController.swift in Sources */,
+				5D2D79841EBFF21800A41EC7 /* DosageViewController.swift in Sources */,
+				5D69132E1EBD18280050909E /* IVInfusionRateViewController.swift in Sources */,
+				EE122F681FB6119400E6D113 /* PediatricsCalculatorsTableViewController.swift in Sources */,
+				EE0CFC511EA5A72C00216FA9 /* CPOTViewController.swift in Sources */,
+				5D69132B1EBD16FA0050909E /* UIPickerViewActionSheetViewController.swift in Sources */,
+				EE122F621FB6104300E6D113 /* PediatricsTableViewController.swift in Sources */,
+				EEB81F3E1E2FB9DD00563FE1 /* AppDelegate.swift in Sources */,
+				EE122F641FB610DC00E6D113 /* PediatricNormalVitalsTableViewController.swift in Sources */,
+				EE0CFC4F1EA5A70600216FA9 /* MAPCPPViewController.swift in Sources */,
+				EE0CFC4D1EA5A6B700216FA9 /* IBWViewController.swift in Sources */,
+				EE6062221EA919770067798A /* Extensions.swift in Sources */,
+				5D2D79821EBFEB9E00A41EC7 /* PediatricTidalVolumeViewController.swift in Sources */,
+				EE122F661FB6112F00E6D113 /* CalculatorsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEB81F411E2FB9DD00563FE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEB81F421E2FB9DD00563FE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEB81F4A1E2FB9DD00563FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEB81F4B1E2FB9DD00563FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEB81F4D1E2FB9DD00563FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E176ABAD01B3C0B82BEEE993 /* Pods-EMTools.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5ES99U9Z85;
+				INFOPLIST_FILE = EMTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jkpayne.EMTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EEB81F4E1E2FB9DD00563FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02C5B166D2966E9CB9CCE7D7 /* Pods-EMTools.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_USE_OPTIMIZATION_PROFILE = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 5ES99U9Z85;
+				INFOPLIST_FILE = EMTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jkpayne.EMTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEB81F351E2FB9DD00563FE1 /* Build configuration list for PBXProject "EMTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEB81F4A1E2FB9DD00563FE1 /* Debug */,
+				EEB81F4B1E2FB9DD00563FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEB81F4C1E2FB9DD00563FE1 /* Build configuration list for PBXNativeTarget "EMTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEB81F4D1E2FB9DD00563FE1 /* Debug */,
+				EEB81F4E1E2FB9DD00563FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEB81F321E2FB9DD00563FE1 /* Project object */;
+}
