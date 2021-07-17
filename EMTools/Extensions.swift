@@ -20,7 +20,7 @@ extension UITextField {
         }
         set {
             maxTextLength[self] = newValue
-            addTarget(self, action: #selector(limitLength), for: UIControlEvents.editingChanged)
+            addTarget(self, action: #selector(limitLength), for: UIControl.Event.editingChanged)
         }
     }
 
@@ -56,7 +56,7 @@ extension UITextField {
 extension UIButton {
     func setTitleWithOutAnimation(title: String?) {
         UIView.setAnimationsEnabled(false)
-        self.setTitle(title, for: UIControlState.normal)
+        self.setTitle(title, for: UIControl.State.normal)
         UIView.setAnimationsEnabled(true)
     }
 }

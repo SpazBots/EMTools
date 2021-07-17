@@ -22,7 +22,7 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func callEagleMedButton(_ sender: Any) {
         if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
     }
 
@@ -71,9 +71,9 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
     var cpp: Int = 0
     let keyboardToolbar = UIToolbar()
     let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MAPCPPViewController.goToPreviousField))
-    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(MAPCPPViewController.goToNextField))
-    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(MAPCPPViewController.doneEditing))
+    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: self, action: #selector(MAPCPPViewController.goToPreviousField))
+    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: self, action: #selector(MAPCPPViewController.goToNextField))
+    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(MAPCPPViewController.doneEditing))
 
     // MARK: - View Life Cycle
 
@@ -149,4 +149,9 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
         icpTextField.inputAccessoryView = keyboardToolbar
         mapTextField.inputAccessoryView = keyboardToolbar
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

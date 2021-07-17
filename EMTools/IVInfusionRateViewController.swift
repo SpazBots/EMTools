@@ -29,7 +29,7 @@ class IVInfusionRateViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func callEagleMedButton(_: Any) {
         if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
     }
 
@@ -154,19 +154,19 @@ class IVInfusionRateViewController: UIViewController, UITextFieldDelegate {
     var ivRateTime = 0.0
     let keyboardToolbar = UIToolbar()
     let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItemStyle.plain, target: self, action: #selector(IVInfusionRateViewController.goToPreviousField))
-    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(IVInfusionRateViewController.goToNextField))
-    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(IVInfusionRateViewController.doneEditing))
+    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: self, action: #selector(IVInfusionRateViewController.goToPreviousField))
+    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: self, action: #selector(IVInfusionRateViewController.goToNextField))
+    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(IVInfusionRateViewController.doneEditing))
 
     // MARK: - Actions
 
     func presentSelector(dataSource: [String], button: UIButton) {
-        let selectorAlert = UIAlertController(title: "Select Unit", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let selectorAlert = UIAlertController(title: "Select Unit", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         for (index, _) in dataSource.enumerated() {
             let title = dataSource[index]
-            selectorAlert.addAction(UIAlertAction(title: title, style: UIAlertActionStyle.default, handler: { _ in self.setButtonSelection(button, title) }))
+            selectorAlert.addAction(UIAlertAction(title: title, style: UIAlertAction.Style.default, handler: { _ in self.setButtonSelection(button, title) }))
         }
-        selectorAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        selectorAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         present(selectorAlert, animated: true, completion: nil)
     }
 
@@ -369,4 +369,9 @@ class IVInfusionRateViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
         view.endEditing(true)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
