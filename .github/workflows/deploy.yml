@@ -43,15 +43,6 @@ jobs:
                     name: build.log
                     path: ~/Library/Logs/gym/*.log
 
-            -   name: Upload release assets
-                uses: softprops/action-gh-release@v1
-                with:
-                    files: |
-                        ${{ env.PRODUCT_NAME }}.ipa
-                        ${{ env.PRODUCT_NAME }}.app.dSYM.zip
-                env:
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
             -   name: Upload app to App Store Connect
                 env:
                     APP_STORE_CONNECT_USERNAME: ${{ secrets.APP_STORE_CONNECT_USERNAME }}
