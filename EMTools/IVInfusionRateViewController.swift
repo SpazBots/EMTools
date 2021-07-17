@@ -226,12 +226,12 @@ class IVInfusionRateViewController: UIViewController, UITextFieldDelegate {
             dose = dose / 1000.0
         case "grams":
             dose = dose * 1000.0
-            //        case "Units":
-            //            dose = dose
-            //        case "mg":
-            //            dose = dose
-            //        case "mEq":
-            //            dose = dose
+                //        case "Units":
+                //            dose = dose
+                //        case "mg":
+                //            dose = dose
+                //        case "mEq":
+                //            dose = dose
 
         default:
             break
@@ -253,12 +253,12 @@ class IVInfusionRateViewController: UIViewController, UITextFieldDelegate {
             concentration = concentration * 1000.0
         case "mcg":
             concentration = concentration / 1000.0
-            //        case "Units":
-            //            concentration = concentration
-            //        case "mg":
-            //            concentration = concentration
-            //        case "mEq":
-        //            concentration = concentration
+                //        case "Units":
+                //            concentration = concentration
+                //        case "mg":
+                //            concentration = concentration
+                //        case "mEq":
+                //            concentration = concentration
         default:
             break
         }

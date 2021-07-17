@@ -11,11 +11,11 @@ import UIKit
 class PediatricsCalculatorsTableViewController: UITableViewController {
 
     // MARK: - Storyboard Actions
-    
+
     @IBAction func callEagleMedButton(_ sender: Any) {
         if let url = URL(string: "tel://18005255220") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-    
+
 }

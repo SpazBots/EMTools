@@ -11,12 +11,13 @@ import UIKit
 class CalculatorsTableViewController: UITableViewController {
 
     // MARK: - Storyboard Actions
-    
+
     @IBAction func callEagleMedButton(_ sender: Any) {
         if let url = URL(string: "tel://18005255220") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

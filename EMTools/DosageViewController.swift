@@ -9,9 +9,9 @@
 import UIKit
 
 class DosageViewController: UIViewController, UITextFieldDelegate {
-    
+
     // MARK: - Storyboard Outlets
-    
+
     @IBOutlet var ivInfusionRateTextField: UITextField!
     @IBOutlet var ivRateTimeUnitSelectButton: UIButton!
     @IBOutlet var weightSwitch: UISwitch!
@@ -25,23 +25,27 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var doseUnitSelectButton: UIButton!
     @IBOutlet var kgLabel: UILabel!
     @IBOutlet var doseTimeUnitSelectButton: UIButton!
-    
+
     // MARK: - Storyboard Actions
-    
+
     @IBAction func callEagleMedButton(_ sender: Any) {
         if let url = URL(string: "tel://18005255220") {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+
     @IBAction private func ivInfusionRateEditingChanged(_ sender: Any) {
         //        calculate()
     }
+
     @IBAction func doseUnitSelectButtonAction(_ sender: Any) {
         presentSelector(dataSource: doseUnit, button: doseUnitSelectButton)
     }
+
     @IBAction func doseTimeUnitSelectButtonAction(_ sender: Any) {
         presentSelector(dataSource: doseTimeUnit, button: doseTimeUnitSelectButton)
     }
+
     @IBAction func weightSwitchDidChange(_ sender: Any) {
         switch weightSwitch.isOn {
         case false:
@@ -53,46 +57,57 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         weightUnitSelectButton.isEnabled = weightSwitch.isOn
         //        calculate()
     }
+
     @IBAction func weightTextFieldEditingChanged(_ sender: Any) {
         //        calculate()
     }
+
     @IBAction func weightUnitSelectButtonAction(_ sender: Any) {
         presentSelector(dataSource: weightUnit, button: weightUnitSelectButton)
     }
+
     @IBAction func concentrationDoseTextFieldEditingChanged(_ sender: Any) {
         //        calculate()
     }
+
     @IBAction func concentrationUnitSelectButtonAction(_ sender: Any) {
         presentSelector(dataSource: concentrationUnit, button: concentrationUnitSelectButton)
     }
+
     @IBAction func concentrationVolumeTextFieldEditingChanged(_ sender: Any) {
         //        calculate()
     }
+
     @IBAction func concentrationVolumeUnitSelectButtonAction(_ sender: Any) {
         presentSelector(dataSource: concentrationVolumeUnit, button: concentrationVolumeUnitSelectButton)
     }
+
     @IBAction func ivRateTimeUnitSelectButtonAction(_ sender: Any) {
         presentSelector(dataSource: ivRateTimeUnit, button: ivRateTimeUnitSelectButton)
     }
+
     @IBAction func ivInfusionRateEditingDidBegin(_ sender: Any) {
         nextBarButton.isEnabled = true
         previousBarButton.isEnabled = false
     }
+
     @IBAction func weightTextFieldEditingDidBegin(_ sender: Any) {
         nextBarButton.isEnabled = true
         previousBarButton.isEnabled = true
     }
+
     @IBAction func concentrationDoseTextFieldEditingDidBegin(_ sender: Any) {
         nextBarButton.isEnabled = true
         previousBarButton.isEnabled = true
     }
+
     @IBAction func concentrationVolumeTextFieldEditingDidBegin(_ sender: Any) {
         nextBarButton.isEnabled = false
         previousBarButton.isEnabled = true
     }
-    
+
     // MARK - Constants and Variables
-    
+
     let doseUnit: [String] = ["mcg", "mg", "grams", "Units", "mEq"]
     let doseTimeUnit: [String] = ["min", "hr"]
     let weightUnit: [String] = ["kg", "lbs"]
@@ -122,12 +137,12 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DosageViewController.goToPreviousField))
     let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DosageViewController.goToNextField))
     let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(DosageViewController.doneEditing))
-    
+
     // MARK: - Actions
     @IBAction func calculateButtonAction(_ sender: Any) {
         calculate()
     }
-    
+
     fileprivate func resetValues() {
         ivInfusionRateTextField.text = ""
         doseUnitSelectButton.setTitleWithOutAnimation(title: "mg")
@@ -157,19 +172,21 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         concentrationUnitSelectButton.isEnabled = true
         doseUnitSelectButton.isEnabled = true
     }
-    
+
     @IBAction func clearButtonAction(_ sender: Any) {
         resetValues()
     }
+
     func presentSelector(dataSource: [String], button: UIButton) {
         let selectorAlert = UIAlertController(title: "Select Unit", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         for (index, _) in dataSource.enumerated() {
             let title = dataSource[index]
-            selectorAlert.addAction(UIAlertAction(title: title, style: UIAlertActionStyle.default, handler: { action in self.setButtonSelection(button, title)}))
+            selectorAlert.addAction(UIAlertAction(title: title, style: UIAlertActionStyle.default, handler: { action in self.setButtonSelection(button, title) }))
         }
         selectorAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         self.present(selectorAlert, animated: true, completion: nil)
     }
+
     func setButtonSelection(_ button: UIButton, _ title: String) {
         button.setTitleWithOutAnimation(title: title)
         switch button {
@@ -214,6 +231,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         }
         //        calculate()
     }
+
     func calculate() {
         weight = weightTextField.double
         concentration = concentrationDoseTextField.double
@@ -230,6 +248,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         }
         printValues()
     }
+
     func calculateDoseUnit() {
         switch selectedDoseUnit {
         case "mcg":
@@ -242,6 +261,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             break
         }
     }
+
     func calculateDoseTime() {
         switch selectedDoseTimeUnit {
         case "min":
@@ -252,6 +272,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             break
         }
     }
+
     func calculateInfusionTime() {
         switch selectedIvRateTimeUnit {
         case "ml/min":
@@ -264,6 +285,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             break
         }
     }
+
     func calculateConcentration() {
         switch selectedConcentrationUnit {
         case "Units":
@@ -286,6 +308,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             concentrationVolumeCc = concentrationVolume * 1000
         }
     }
+
     func convertWeight() {
         switch selectedWeightUnit {
         case "lbs":
@@ -294,6 +317,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             weightKg = weight
         }
     }
+
     @objc func goToPreviousField(_: Any?) {
         if weightTextField.isFirstResponder {
             weightTextField.resignFirstResponder()
@@ -310,6 +334,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             concentrationDoseTextField.becomeFirstResponder()
         }
     }
+
     @objc func goToNextField() {
         if ivInfusionRateTextField.isFirstResponder {
             ivInfusionRateTextField.resignFirstResponder()
@@ -326,9 +351,11 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             concentrationVolumeTextField.becomeFirstResponder()
         }
     }
+
     @objc func doneEditing(_: Any?) {
         self.view.endEditing(true)
     }
+
     func addBarButtons() {
         keyboardToolbar.sizeToFit()
         keyboardToolbar.items = [previousBarButton, nextBarButton, flexBarButton, doneBarButton]
@@ -337,6 +364,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         concentrationDoseTextField.inputAccessoryView = keyboardToolbar
         concentrationVolumeTextField.inputAccessoryView = keyboardToolbar
     }
+
     func printValues() {
         print("ivInfusionRateTextField.double: " + "\(ivInfusionRateTextField.double)")
         print("weightKg: " + "\(weightKg)")
@@ -350,9 +378,9 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         print("finalDose: " + "\(finalDose)")
         print("finalDoseTime: " + "\(finalDoseTime)")
     }
-    
+
     // MARK: - View Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addBarButtons()
@@ -362,12 +390,15 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         concentrationVolumeTextField.delegate = self
         ivInfusionRateTextField.becomeFirstResponder()
     }
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.selectAllText()
     }
+
     func buttonPressed(_ button: UIButton, sender: Any) {
         print("success")
     }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
