@@ -30,26 +30,26 @@ extension UITextField {
         }
         let selection = selectedTextRange
         let maxIndex = newText.index(newText.startIndex, offsetBy: maxLength)
-        text = newText.substring(to: maxIndex)
+        text = String(newText[..<maxIndex])
         selectedTextRange = selection
     }
 }
 
 extension UITextField {
     var integer: Int {
-        return Int(text ?? "") ?? 0
+        Int(text ?? "") ?? 0
     }
 }
 
 extension UITextField {
     var double: Double {
-        return Double(text ?? "") ?? 0.0
+        Double(text ?? "") ?? 0.0
     }
 }
 
 extension UITextField {
     func selectAllText() {
-        self.selectedTextRange = self.textRange(from: self.beginningOfDocument, to: self.endOfDocument)
+        selectedTextRange = textRange(from: beginningOfDocument, to: endOfDocument)
     }
 }
 

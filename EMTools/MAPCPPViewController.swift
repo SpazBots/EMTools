@@ -92,7 +92,7 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 
     // MARK: - Actions
@@ -138,7 +138,7 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
     }
 
     @objc func doneEditing(_: Any?) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 
     func addBarButtons() {

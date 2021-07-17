@@ -184,7 +184,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
             selectorAlert.addAction(UIAlertAction(title: title, style: UIAlertActionStyle.default, handler: { action in self.setButtonSelection(button, title) }))
         }
         selectorAlert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-        self.present(selectorAlert, animated: true, completion: nil)
+        present(selectorAlert, animated: true, completion: nil)
     }
 
     func setButtonSelection(_ button: UIButton, _ title: String) {
@@ -353,7 +353,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     }
 
     @objc func doneEditing(_: Any?) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 
     func addBarButtons() {
@@ -400,6 +400,6 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 }

@@ -32,10 +32,10 @@ class IBWViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
     // MARK: - Variables and Constants
 
-    let pickerViewHeigthFeet = (4...7).map {
+    let pickerViewHeightFeet = (4...7).map {
         String($0)
     }
-    let pickerViewHeigthInches = [" 0", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", "10 ", "11 "]
+    let pickerViewHeightInches = [" 0", " 1", " 2", " 3", " 4", " 5", " 6", " 7", " 8", " 9", "10 ", "11 "]
     let pickerViewTidalVolume = (4...8).map {
         String($0)
     }
@@ -91,9 +91,9 @@ class IBWViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if pickerView == heightPickerView {
             switch component {
             case 0:
-                return pickerViewHeigthFeet.count
+                return pickerViewHeightFeet.count
             case 1:
-                return pickerViewHeigthInches.count
+                return pickerViewHeightInches.count
             default:
                 return 0
             }
@@ -107,9 +107,9 @@ class IBWViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if pickerView == heightPickerView {
             switch component {
             case 0:
-                return pickerViewHeigthFeet[row]
+                return pickerViewHeightFeet[row]
             case 1:
-                return pickerViewHeigthInches[row]
+                return pickerViewHeightInches[row]
             default:
                 return defaultArray[row]
             }
@@ -119,7 +119,7 @@ class IBWViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
 
     func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
-        return 100
+        100
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

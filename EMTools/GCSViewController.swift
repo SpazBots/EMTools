@@ -29,9 +29,9 @@ class GCSViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         }
     }
 
-    // MARK: - Constants and Vairables
+    // MARK: - Constants and Variables
 
-    let eyesArray: [String] = ["Spontaneously +4", "To Verbal Vommand +3", "To Pain +2", "No Response +1"]
+    let eyesArray: [String] = ["Spontaneously +4", "To Verbal Command +3", "To Pain +2", "No Response +1"]
     let eyesScoreArray: [Int] = [4, 3, 2, 1]
     let verbalArray: [String] = ["Oriented +5", "Confused +4", "Inappropriate Words +3", "Incomprehensible Sounds +2", "No Response +1"]
     let verbalScoreArray: [Int] = [5, 4, 3, 2, 1]
@@ -63,7 +63,7 @@ class GCSViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     // MARK: - UIPickerView Configuration
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
