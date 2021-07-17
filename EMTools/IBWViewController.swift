@@ -47,31 +47,23 @@ class IBWViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 		let feet = heightPickerView.selectedRow(inComponent: 0)
 		let inch = heightPickerView.selectedRow(inComponent: 1)
 		let tidalVolume = tidalVolumePickerView.selectedRow(inComponent: 0) + 4
-		let totalInches = ((feet + 4) * 12) + inch
-		let adjustedHeight = totalInches - 60
-		var weight: Double = 0.0
-		var idealBodyWeight: Double = 0.0
-		var ventTidalVolume: Int = 0
-		switch gender {
-		case 0:
-			weight = 50.0
-		case 1:
-			weight = 45.0
-		default:
-			break
-		}
-		idealBodyWeight = weight + (Double(adjustedHeight) * 2.3)
-		ventTidalVolume = Int((idealBodyWeight * Double(tidalVolume)) + 0.5)
-		idealBodyWeightLabel.text = "Ideal Body Weight: " + "\(idealBodyWeight)" + " kg"
+        let totalInches = ((feet + 4) * 12) + inch
+        let adjustedHeight = totalInches - 60
+        var weight: Double = 0.0
+        var idealBodyWeight: Double = 0.0
+        var ventTidalVolume: Int = 0
+        switch gender {
+        case 0:
+            weight = 50.0
+        case 1:
+            weight = 45.5
+        default:
+            break
+        }
+        idealBodyWeight = weight + (Double(adjustedHeight) * 2.3)
+        ventTidalVolume = Int((idealBodyWeight * Double(tidalVolume)) + 0.5)
+		idealBodyWeightLabel.text = "Ideal Body Weight: " + "\(idealBodyWeight.rounded(toPlaces: 2))" + " kg"
 		ventTidalVolumeLabel.text = "Set Tidal Volume to: " + "\(ventTidalVolume)" + " ml"
-		print("gender: " + "\(gender)")
-		print("feet: " + "\(feet)")
-		print("inch: " + "\(inch)")
-		print("totalInches: " + "\(totalInches)")
-		print("tidalVolume: " + "\(tidalVolume)")
-		print("adjustedHeight: " + "\(adjustedHeight)")
-		print("idealBodyWeight: " + "\(idealBodyWeight)")
-		print("ventTidalVolume: " + "\(ventTidalVolume)")
 	}
     
 	// MARK: - View Life Cycle

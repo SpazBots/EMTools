@@ -99,7 +99,7 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
 		mapTextField.text = "\(map)"
 		calculateCPP()
 	}
-	func goToPreviousField(_: Any?) {
+    @objc func goToPreviousField(_: Any?) {
 		if diastolicTextField.isFirstResponder {
 			diastolicTextField.resignFirstResponder()
 			systolicTextField.becomeFirstResponder()
@@ -111,7 +111,7 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
 			icpTextField.becomeFirstResponder()
 		}
 	}
-	func goToNextField() {
+    @objc func goToNextField() {
 		if systolicTextField.isFirstResponder {
 			systolicTextField.resignFirstResponder()
 			diastolicTextField.becomeFirstResponder()
@@ -123,7 +123,7 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
 			mapTextField.becomeFirstResponder()
 		}
 	}
-	func doneEditing(_: Any?) {		
+    @objc func doneEditing(_: Any?) {		
 		self.view.endEditing(true)
 	}
 	func addBarButtons() {

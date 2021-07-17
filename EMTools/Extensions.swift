@@ -22,8 +22,8 @@ extension UITextField {
 			addTarget(self, action: #selector(limitLength), for: UIControlEvents.editingChanged)
 		}
 	}
-	func limitLength(_ textField: UITextField) {
-		guard let newText = textField.text, newText.characters.count > maxLength else {
+    @objc func limitLength(_ textField: UITextField) {
+		guard let newText = textField.text, newText.count > maxLength else {
 			return
 		}
 		let selection = selectedTextRange
@@ -59,4 +59,11 @@ extension Double {
 		let outputString = "\(String(format: "%.1f", self))"
 		return outputString
 	}
+}
+extension Double {
+    /// Rounds the double to decimal places value
+    func rounded(toPlaces places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }

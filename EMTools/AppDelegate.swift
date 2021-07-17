@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UXCam
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		UXCam.start(withKey: "26fff7060c58a0e")
 		// Override point for customization after application launch.
 		return true
 	}
