@@ -366,6 +366,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 246;
 				DEVELOPMENT_TEAM = 5ES99U9Z85;
 				INFOPLIST_FILE = EMTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -387,6 +388,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 246;
 				DEVELOPMENT_TEAM = 5ES99U9Z85;
 				INFOPLIST_FILE = EMTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
