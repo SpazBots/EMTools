@@ -25,12 +25,6 @@ class CPOTViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
     // MARK: StoryBoard Actions
 
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
     @IBAction func intubatedSegementedControlChanged(_ sender: Any) {
         if intubatedSegementedControl.selectedSegmentIndex == 0 {
             ventilatorCompliancePickerView.isHidden = true

@@ -21,12 +21,6 @@ class UnitConversionViewController: UIViewController {
 
     // MARK: - StoryBoard Actions
 
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
     @IBAction func weightEditingChanged(_ sender: Any) {
         convert()
     }

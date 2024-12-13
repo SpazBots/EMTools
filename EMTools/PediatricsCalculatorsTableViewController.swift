@@ -12,12 +12,6 @@ class PediatricsCalculatorsTableViewController: UITableViewController {
 
     // MARK: - Storyboard Actions
 
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
 }
 
 // Helper function inserted by Swift 4.2 migrator.

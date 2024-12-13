@@ -19,12 +19,6 @@ class PediatricTidalVolumeViewController: UIViewController, UITextFieldDelegate 
 
     // MARK: - Storyboard Actions
 
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
     @IBAction func weightTextFieldEditingChanged(_ sender: Any) {
         calculate()
     }
@@ -56,9 +50,9 @@ class PediatricTidalVolumeViewController: UIViewController, UITextFieldDelegate 
     var tidalVolume: Double = 0.0
     let keyboardToolbar = UIToolbar()
     let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: self, action: #selector(PediatricTidalVolumeViewController.goToPreviousField))
-    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: self, action: #selector(PediatricTidalVolumeViewController.goToNextField))
-    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(PediatricTidalVolumeViewController.doneEditing))
+    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: PediatricTidalVolumeViewController.self, action: #selector(PediatricTidalVolumeViewController.goToPreviousField))
+    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: PediatricTidalVolumeViewController.self, action: #selector(PediatricTidalVolumeViewController.goToNextField))
+    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: PediatricTidalVolumeViewController.self, action: #selector(PediatricTidalVolumeViewController.doneEditing))
 
     // MARK: - Actions
 

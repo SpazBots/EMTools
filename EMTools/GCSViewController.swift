@@ -20,15 +20,6 @@ class GCSViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet var motorLabel: UILabel!
     @IBOutlet var motorPickerView: UIPickerView!
 
-    // MARK: - StoryBoard Actions
-
-
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
     // MARK: - Constants and Variables
 
     let eyesArray: [String] = ["Spontaneously +4", "To Verbal Command +3", "To Pain +2", "No Response +1"]

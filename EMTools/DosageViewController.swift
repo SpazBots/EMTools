@@ -28,12 +28,6 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Storyboard Actions
 
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
     @IBAction private func ivInfusionRateEditingChanged(_ sender: Any) {
         //        calculate()
     }
@@ -134,9 +128,9 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     var ivRateTime: Double = 0.0
     let keyboardToolbar = UIToolbar()
     let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: self, action: #selector(DosageViewController.goToPreviousField))
-    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: self, action: #selector(DosageViewController.goToNextField))
-    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(DosageViewController.doneEditing))
+    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: DosageViewController.self, action: #selector(DosageViewController.goToPreviousField))
+    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: DosageViewController.self, action: #selector(DosageViewController.goToNextField))
+    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: DosageViewController.self, action: #selector(DosageViewController.doneEditing))
 
     // MARK: - Actions
     @IBAction func calculateButtonAction(_ sender: Any) {
@@ -233,7 +227,11 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     }
 
     func calculate() {
-        weight = weightTextField.double
+        if weightSwitch.isOn {
+            weight = weightTextField.double
+        } else {
+            weight = 1.0
+        }
         concentration = concentrationDoseTextField.double
         concentrationVolume = concentrationVolumeTextField.double
         calculateConcentration()
@@ -244,7 +242,7 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         calculateDoseUnit()
         calculateDoseTime()
         if !(finalDose * finalDoseTime).isNaN {
-            dosageLabel.text = "Dosage: " + "\((finalDose * finalDoseTime).rounded(toPlaces: 2))"
+            dosageLabel.text = "Dosage: \((finalDose * finalDoseTime).rounded(toPlaces: 2))"
         }
         printValues()
     }
@@ -258,17 +256,17 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
         case "gram":
             finalDose = dose / 1000
         default:
+            finalDose = dose
             break
         }
     }
 
     func calculateDoseTime() {
         switch selectedDoseTimeUnit {
-        case "min":
-            finalDoseTime = 1.0
         case "hr":
             finalDoseTime = 60.0
         default:
+            finalDoseTime = 1.0
             break
         }
     }
@@ -288,17 +286,14 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
 
     func calculateConcentration() {
         switch selectedConcentrationUnit {
-        case "Units":
-            concentrationMg = concentration
         case "mcg":
             concentrationMg = concentration / 1000.0
         case "mg":
             concentrationMg = concentration
         case "grams":
             concentrationMg = concentration * 1000.0
-        case "mEq":
-            concentrationMg = concentration
         default:
+            concentrationMg = concentration
             break
         }
         switch selectedConcentrationVolumeUnit {
@@ -366,17 +361,17 @@ class DosageViewController: UIViewController, UITextFieldDelegate {
     }
 
     func printValues() {
-        print("ivInfusionRateTextField.double: " + "\(ivInfusionRateTextField.double)")
-        print("weightKg: " + "\(weightKg)")
-        print("concentrationMg: " + "\(concentrationMg)")
-        print("concentrationVolumeCc: " + "\(concentrationVolumeCc)")
-        print("(concentrationMg / concentrationVolumeCc): " + "\((concentrationMg / concentrationVolumeCc))")
-        print("(weightKg * infusionTime): " + "\((weightKg * infusionTime))")
-        print("((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)): " + "\(((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)))")
-        print("ivInfusionRateTextField.double * ((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)): " + "\(ivInfusionRateTextField.double * ((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)))")
-        print("dose: " + "\(dose)")
-        print("finalDose: " + "\(finalDose)")
-        print("finalDoseTime: " + "\(finalDoseTime)")
+        print("ivInfusionRateTextField.double: \(ivInfusionRateTextField.double)")
+        print("weightKg: \(weightKg)")
+        print("concentrationMg: \(concentrationMg)")
+        print("concentrationVolumeCc: \(concentrationVolumeCc)")
+        print("(concentrationMg / concentrationVolumeCc): \((concentrationMg / concentrationVolumeCc))")
+        print("(weightKg * infusionTime): \((weightKg * infusionTime))")
+        print("((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)): \(((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)))")
+        print("ivInfusionRateTextField.double * ((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)): \(ivInfusionRateTextField.double * ((concentrationMg / concentrationVolumeCc) / (weightKg * infusionTime)))")
+        print("dose: \(dose)")
+        print("finalDose: \(finalDose)")
+        print("finalDoseTime: \(finalDoseTime)")
     }
 
     // MARK: - View Lifecycle

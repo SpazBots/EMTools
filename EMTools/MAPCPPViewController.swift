@@ -20,12 +20,6 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Storyboard Actions
 
-    @IBAction func callEagleMedButton(_ sender: Any) {
-        if let url = URL(string: "tel://18005255220") {
-            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
-        }
-    }
-
     @IBAction func systolicTextFieldEditingDidEnd(_ sender: Any) {
         calculateMAP()
     }
@@ -71,9 +65,9 @@ class MAPCPPViewController: UIViewController, UITextFieldDelegate {
     var cpp: Int = 0
     let keyboardToolbar = UIToolbar()
     let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: self, action: #selector(MAPCPPViewController.goToPreviousField))
-    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: self, action: #selector(MAPCPPViewController.goToNextField))
-    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(MAPCPPViewController.doneEditing))
+    let previousBarButton = UIBarButtonItem(title: "Previous", style: UIBarButtonItem.Style.plain, target: MAPCPPViewController.self, action: #selector(MAPCPPViewController.goToPreviousField))
+    let nextBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItem.Style.plain, target: MAPCPPViewController.self, action: #selector(MAPCPPViewController.goToNextField))
+    let doneBarButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: MAPCPPViewController.self, action: #selector(MAPCPPViewController.doneEditing))
 
     // MARK: - View Life Cycle
 
