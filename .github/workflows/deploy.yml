@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout project
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set environment variables from project settings
         env:
@@ -46,7 +46,7 @@ jobs:
           fastlane run build_app
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build.log
           path: ~/Library/Logs/gym/*.log
