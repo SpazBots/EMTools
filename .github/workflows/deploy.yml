@@ -12,7 +12,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set environment variables from project settings
         env:
@@ -21,7 +21,7 @@ jobs:
           exec .github/scripts/set-env-from-xcodeproj.sh
 
       - name: Update iOS version Info.plist
-        uses: damienaicheh/update-ios-version-info-plist-action@v1.1.0
+        uses: damienaicheh/update-ios-version-info-plist-action@v1.2.0
         with:
           info-plist-path: "./EMTools/Info.plist"
           bundle-short-version-string: "1.0"

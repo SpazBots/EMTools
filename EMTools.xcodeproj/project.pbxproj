@@ -376,7 +376,7 @@
 				CURRENT_PROJECT_VERSION = 246;
 				DEVELOPMENT_TEAM = 5ES99U9Z85;
 				INFOPLIST_FILE = EMTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 246;
 				DEVELOPMENT_TEAM = 5ES99U9Z85;
 				INFOPLIST_FILE = EMTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
